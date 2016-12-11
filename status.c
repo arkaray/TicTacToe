@@ -1,6 +1,6 @@
 /*Returns the winner if winner can be determined
 **ie. 1 or 2 indicating player 1 or player 2
-**else 0
+**else 0 if result undetermined or game drawn
 */
 int win(int arr[][3])
 {
@@ -18,4 +18,24 @@ int win(int arr[][3])
 	if(arr[0][2] == arr[1][1] && arr[1][1] == arr[2][0])
 		ans = arr[1][1];
 	return ans;
+}
+
+int filled(int arr[][3])
+{
+	int i,j;
+	for(i=0;i<3;i++)
+	{
+		for(j=0;j<3;j++)
+		{
+			if(arr[i][j]==0)
+				return 0;
+		}
+	}
+	return 1;
+}
+
+/*Returns 1 if game drawn*/
+int draw(int arr[][3])
+{
+	return !win(arr) && filled(arr);
 }
