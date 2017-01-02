@@ -1,4 +1,10 @@
 #include"status.h"
+#include<stdio.h>
+
+/*
+**Issues:
+**Remove direct interaction with I/O
+*/
 void turn(int arr[][3])
 {
 	static int t=1;

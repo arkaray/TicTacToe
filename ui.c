@@ -1,3 +1,4 @@
+#include<stdio.h>
 void display(int arr[][3],char p[])
 {
 	int i,j;
