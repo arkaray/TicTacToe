@@ -2,6 +2,9 @@
 #include"ui.h"
 #include<stdio.h>
 
+typedef struct{
+	int i,j;
+} Position;
 /*
 **Issues:
 **Remove direct interaction with I/O
@@ -9,20 +12,19 @@
 void turn(int arr[][3])
 {
 	static int t=1;
-	int i,j;
-	/*printf("Player %d's turn\n",t);*/
+	Position pos;
 	showturn(t);
 	printf("Enter a position:");
-	scanf("%d,%d",&i,&j);
+	scanf("%d,%d",&pos.i,&pos.j);
 
-	if(arr[i-1][j-1] != 0)
+	if(arr[pos.i-1][pos.j-1] != 0)
 	{
 		printf("Position Already Ocuppied\n");
 		turn(arr);
 		return;
 	}
 
-	arr[i-1][j-1] = t;
+	arr[pos.i-1][pos.j-1] = t;
 
 	if(t == 1)
 		t = 2;
