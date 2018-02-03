@@ -1,4 +1,5 @@
 #include<stdio.h>
+
 void display(int arr[][3],char p[])
 {
 	int i,j;
@@ -10,13 +11,18 @@ void display(int arr[][3],char p[])
 				printf("_");
 			else
 				printf(" ");
-			
+
 			printf("%c",p[arr[i][j]]);
-			
+
 			if(j != 2)
 				printf("|");
 			else
 				printf("\n");
 		}
 	}
+}
+
+
+void showturn(int p){
+	printf("Player %d's turn\n",p);
 }
