@@ -1,0 +1,14 @@
+It is the classic TicTacToe
+
+Requirements:
+make
+A compiler compatible with make
+
+To play:
+Download and unzip the source
+	Terminal:
+	make
+	./TicTacToe
+
+Use ./TicTacToe on subsequent play
+
