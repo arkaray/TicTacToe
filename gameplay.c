@@ -12,8 +12,7 @@ void turn(int arr[][3])
 	static int t=1;
 	Position pos;
 	showturn(t);
-	printf("Enter a position:");
-	scanf("%d,%d",&pos.i,&pos.j);
+	inputPosition(&pos);
 
 	if(arr[pos.i-1][pos.j-1] != 0)
 	{
