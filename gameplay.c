@@ -1,10 +1,8 @@
 #include"status.h"
 #include"ui.h"
+#include"types.h"
 #include<stdio.h>
 
-typedef struct{
-	int i,j;
-} Position;
 /*
 **Issues:
 **Remove direct interaction with I/O
