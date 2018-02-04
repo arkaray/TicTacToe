@@ -7,4 +7,7 @@ int win(int arr[][3]);
 /*Returns 1 if game drawn*/
 int draw(int arr[][3]);
 
+/*Checks if any player has a chance of winning*/
+int winPossible(int arr[][3]);
+
 int filled(int arr[][3]);
