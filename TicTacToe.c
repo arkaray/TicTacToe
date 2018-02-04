@@ -13,11 +13,11 @@ int main()
 	init(arr,p);
 	display(arr,p);
 
-	while(!win(arr) && !filled(arr))
+	while(!win(arr) && !draw(arr))
 	{
 		turn(arr);
 		display(arr,p);
 	}
-	showGameResult(arr);	
+	showGameResult(arr);
 	return 0;
 }

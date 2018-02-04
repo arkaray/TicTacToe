@@ -38,6 +38,7 @@ int filled(int arr[][3])
 int winPossible(int arr[][3]){
 	int i,j;
 	int p;
+	int c=0;
 	for(i=0;i<3;i++){
 		/*Rows*/
 		p=0;
@@ -46,8 +47,9 @@ int winPossible(int arr[][3]){
 				p=arr[i][j];
 			}else if(arr[i][j]!=0 && p!=arr[i][j]){
 				break;
-			}else if(j==2){
-				return 1;
+			}
+			if(j==2){
+				c++;
 			}
 		}
 		/*Column*/
@@ -57,8 +59,9 @@ int winPossible(int arr[][3]){
 				p=arr[j][i];
 			}else if(arr[j][i]!=0 && p!=arr[j][i]){
 				break;
-			}else if(j==2){
-				return 1;
+			}
+			if(j==2){
+				c++;
 			}
 		}
 	}
@@ -69,8 +72,9 @@ int winPossible(int arr[][3]){
 			p=arr[j][j];
 		}else if(arr[j][j]!=0 && p!=arr[j][j]){
 			break;
-		}else if(j==2){
-			return 1;
+		}
+		if(j==2){
+			c++;
 		}
 	}
 	/*Secondary Diagonal*/
@@ -80,10 +84,12 @@ int winPossible(int arr[][3]){
 			p=arr[j][2-j];
 		}else if(arr[j][2-j]!=0 && p!=arr[j][2-j]){
 			break;
-		}else if(j==2){
-			return 1;
+		}
+		if(j==2){
+			c++;
 		}
 	}
+	return c>1;
 }
 
 /*Returns 1 if game drawn*/
