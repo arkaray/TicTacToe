@@ -23,6 +23,14 @@ void display(int arr[][3],char p[])
 	}
 }
 
+void showGameResult(int arr[][3])
+{
+	if(!draw(arr))
+		printf("Player %d has won\n",win(arr));
+	else
+		printf("Game has ended in a draw\n");
+}
+
 void inputPosition(Position *pos){
 	printf("Enter a position:");
 	scanf("%d,%d",&pos->i,&pos->j);

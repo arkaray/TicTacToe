@@ -29,14 +29,6 @@ void turn(int arr[][3])
 		t = 1;
 }
 
-void printGameResult(int arr[][3])
-{
-	if(!draw(arr))
-		printf("Player %d has won\n",win(arr));
-	else
-		printf("Game has ended in a draw\n");
-}
-
 void init(int arr[][3],char p[])
 {
 	int i,j;
