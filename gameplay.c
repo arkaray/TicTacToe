@@ -16,7 +16,7 @@ void turn(int arr[][3])
 
 	if(arr[pos.i-1][pos.j-1] != 0)
 	{
-		printf("Position Already Ocuppied\n");
+		alert("Position Already Ocuppied\n");
 		turn(arr);
 		return;
 	}

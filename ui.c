@@ -39,3 +39,7 @@ void inputPosition(Position *pos){
 void showturn(int p){
 	printf("Player %d's turn\n",p);
 }
+
+void alert(char const *s){
+	printf(s);
+}
