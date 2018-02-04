@@ -50,6 +50,8 @@ int winPossible(int arr[][3]){
 			}
 			if(j==2){
 				c++;
+				if(p==1)
+					return 1;
 			}
 		}
 		/*Column*/
@@ -62,6 +64,8 @@ int winPossible(int arr[][3]){
 			}
 			if(j==2){
 				c++;
+				if(p==1)
+					return 1;
 			}
 		}
 	}
@@ -75,6 +79,8 @@ int winPossible(int arr[][3]){
 		}
 		if(j==2){
 			c++;
+			if(p==1)
+				return 1;
 		}
 	}
 	/*Secondary Diagonal*/
@@ -87,6 +93,8 @@ int winPossible(int arr[][3]){
 		}
 		if(j==2){
 			c++;
+			if(p==1)
+				return 1;
 		}
 	}
 	return c>1;
