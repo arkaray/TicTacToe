@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include"types.h"
+#include"status.h"
 
 void display(int arr[][3],char p[])
 {
@@ -41,5 +42,5 @@ void showturn(int p){
 }
 
 void alert(char const *s){
-	printf(s);
+	puts(s);
 }
