@@ -1,7 +1,7 @@
 
 all: TicTacToe
 
-test: TicTacToe clean
+test-build: TicTacToe clean
 
 TicTacToe: TicTacToe.c status.o ui.o gameplay.o
 	$(CC) -o $@ TicTacToe.c status.o ui.o gameplay.o
