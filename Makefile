@@ -1,10 +1,16 @@
 
+OUTPUT_OPTION = -MMD -MD -o $@
+SRC = $(wildcard *.c)
+OBJS = $(SRC:.c=.o)
+DEPS = $(SRC:.c=.d)
+-include ${DEPS}
+
 all: TicTacToe
 
 test-build: TicTacToe clean
 
-TicTacToe: TicTacToe.c status.o ui.o gameplay.o
-	$(CC) -o $@ TicTacToe.c status.o ui.o gameplay.o
+TicTacToe: ${OBJS}
+	$(CC) -o $@ $^
 
 clean:
 	rm -f *.o
