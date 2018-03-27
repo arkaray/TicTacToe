@@ -7,11 +7,13 @@ DEPS = $(SRC:.c=.d)
 
 all: TicTacToe
 
+.PHONY: test-build
 test-build: TicTacToe clean
 
 TicTacToe: ${OBJS}
 	$(CC) -o $@ $^
 
+.PHONY: clean
 clean:
 	rm -f *.o
 	rm -f TicTacToe
